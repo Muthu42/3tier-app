@@ -16,6 +16,8 @@ services:
       - "5000:5000"
     depends_on:
       - mysql-db
+    volumes:
+      - /var/log/myapp:/var/log/myapp
 
   mysql-db:
     image: mysql:8.0
